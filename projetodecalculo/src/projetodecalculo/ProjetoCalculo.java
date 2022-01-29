@@ -18,11 +18,16 @@ public class ProjetoCalculo {
 		double dNota4 = Double.parseDouble(nota4);
 
 		double media = (dNota1 + dNota2 + dNota3 + dNota4) / 4;
-
+		
+		/*Media para aprovação*/
+	if(media>=50) {
 		if (media >= 70) {
-			JOptionPane.showMessageDialog(null, "Aluno Aprovado");
+			JOptionPane.showMessageDialog(null, "Aluno Aprovado " + media);
 		} else {
-			JOptionPane.showMessageDialog(null, "Aluno reprovado");
-		}
+			JOptionPane.showMessageDialog(null, "Aluno em Recuperação " + media);
+			}
+	}else {
+		JOptionPane.showMessageDialog(null, "Aluno reprovado " + media);
+	}
 	}
 }
